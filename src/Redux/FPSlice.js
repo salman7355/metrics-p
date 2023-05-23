@@ -158,8 +158,12 @@ const FPSLice = createSlice({
     calcFP: (state, action) => {
       state.FP = state.UFP * state.TCF;
     },
+    calcDirectDI: (state, action) => {
+      state.DI = action.payload;
+    },
   },
 });
 
-export const { calcUFP, calcTCF, calcFP, calcDI } = FPSLice.actions;
+export const { calcUFP, calcTCF, calcFP, calcDI, calcDirectDI } =
+  FPSLice.actions;
 export default FPSLice.reducer;

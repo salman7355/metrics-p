@@ -7,7 +7,7 @@ import { calcDI } from "../Redux/FPSlice";
 const DiRates = ({ Name }) => {
   const { DIRates } = useSelector((state) => state.FP);
 
-  const [rateChoice, setRateChoice] = useState("");
+  const [rateChoice, setRateChoice] = useState("NoInfluence");
   const dispatch = useDispatch();
 
   const calcdi = () => {
@@ -25,7 +25,9 @@ const DiRates = ({ Name }) => {
       ? (Result = DIRates.Significant)
       : (Result = DIRates.Essential);
 
-    dispatch(calcDI(Result));
+    if (Result !== 0) {
+      dispatch(calcDI(Result));
+    }
   };
 
   return (
