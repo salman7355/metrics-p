@@ -18,8 +18,10 @@ export const DIList = () => {
   const FPResult = () => {
     if (DiValue !== 0) {
       dispatch(calcDirectDI(DiValue));
+      dispatch(calcTCF(DiValue));
+    } else {
+      dispatch(calcTCF(DI));
     }
-    dispatch(calcTCF(DI));
     dispatch(calcFP());
   };
 

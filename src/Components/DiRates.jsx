@@ -42,6 +42,7 @@ const DiRates = ({ Name }) => {
           variant="outline-secondary"
           title={rateChoice}
           id="input-group-dropdown-2"
+          onFocus={calcdi}
           align="end"
           className="mb-3"
         >
@@ -65,11 +66,11 @@ const DiRates = ({ Name }) => {
           </Dropdown.Item>
         </DropdownButton>
       </div>
-      <div className="d-flex justify-content-center">
+      {/* <div className="d-flex justify-content-center">
         <button className="btn btn-primary mb-3" onClick={calcdi}>
           Calc DI
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
