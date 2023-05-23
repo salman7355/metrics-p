@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import FPList from "./Components/FPList";
+import AVC from "./Components/AVC";
+import ActionBar from "./Components/ActionBar";
+import { DIList } from "./Components/DIList";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ActionBar />
+      <div className="App d-flex justify-content-center">
+        <FPList className="mb-3" />
+      </div>
+      <div className="d-flex justify-content-center m-3">
+        <DIList />
+      </div>
+      <AVC />
     </div>
   );
 }
